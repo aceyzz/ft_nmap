@@ -142,3 +142,27 @@ sudo su
 ## Grade
 
 > En cours d'évaluation
+
+<br>
+
+## Authors
+
+<div style="display: flex; gap: 2rem; align-items: center;">
+
+<div align="center">
+<a href="https://github.com/cduffaut" target="_blank">
+	<img src="https://img.icons8.com/?size=100&id=tZuAOUGm9AuS&format=png&color=000000" width="40" alt="GitHub Icon"/>
+	<br>
+	<b>Cécile</b>
+</a>
+</div>
+
+<div align="center">
+<a href="https://github.com/aceyzz" target="_blank">
+	<img src="https://img.icons8.com/?size=100&id=tZuAOUGm9AuS&format=png&color=000000" width="40" alt="GitHub Icon"/>
+	<br>
+	<b>Cédric</b>
+</a>
+</div>
+
+</div>
