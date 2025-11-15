@@ -1,0 +1,40 @@
+services:
+  ft_nmap:
+    build: ./vm
+    init: true
+    container_name: ft_nmap
+    hostname: ft_nmap
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ./code:/work
+    working_dir: /work
+    command: ["sleep", "infinity"]
+    networks:
+      net:
+        ipv4_address: 10.0.0.2
+  
+  target_web:
+    image: nginx:latest
+    container_name: target_web
+    hostname: target_web
+    networks:
+      net:
+        ipv4_address: 10.0.0.10
+
+  target_nc:
+    image: alpine:latest
+    container_name: target_nc
+    hostname: target_nc
+    command: ["sh", "-c", "while true; do nc -lk -p 4242 >/dev/null; done"]
+    networks:
+      net:
+        ipv4_address: 10.0.0.20
+
+networks:
+  net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.0.0/16
+          gateway: 10.0.0.1
